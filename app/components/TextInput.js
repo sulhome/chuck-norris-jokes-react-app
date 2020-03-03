@@ -8,8 +8,9 @@ export default ({label, placeholder, errorMessage, handleChange, value}) => {
                    placeholder={placeholder}
                    onChange={(e) => handleChange(e.target.value)}
                    value={value}
+                   data-testid="searchJokeInput"
             />
-            <div date-testid="in" className="invalid-feedback">
+            <div data-testid="inputErrorMessage" className="invalid-feedback">
                 {errorMessage}
             </div>            
         </div>

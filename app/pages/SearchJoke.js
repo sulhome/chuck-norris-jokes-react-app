@@ -72,7 +72,8 @@ export default () => {
                 />
                 <button type="submit"
                         className={`btn btn-success ${!isFormValid() ? 'disabled' : ''}`}
-                        disabled={!isFormValid()}>Get my custom Joke!
+                        disabled={!isFormValid()}
+                data-testid="submitSearchJoke">Get my custom Joke!
                 </button>
             </form>
             <DisplayJoke joke={state.joke}/>
