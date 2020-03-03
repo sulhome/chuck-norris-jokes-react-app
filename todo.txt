@@ -1,8 +1,0 @@
-- add tests
-- update page title
-- change nav to bootstrap friendly
-- accessibility
-- tslint
-
- console.log(`window.scrollY + window.innerHeight === list.clientHeight + list.offsetTop`);
-            console.log(`${window.scrollY} + ${window.innerHeight} (${window.scrollY + window.innerHeight}) === ${list.clientHeight} + ${list.offsetTop} (${list.clientHeight + list.offsetTop})`);
