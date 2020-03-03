@@ -1,3 +1,4 @@
+- add tests
 - update page title
 - change nav to bootstrap friendly
 - accessibility

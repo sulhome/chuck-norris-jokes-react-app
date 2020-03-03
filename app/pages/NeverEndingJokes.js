@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
-import {getRondomJokes} from '../data/jokes-repository';
+import {getRandomJokes} from '../data/jokes-repository';
 import DisplayJoke from '../components/DisplayJoke';
 
 const style = {
@@ -25,7 +25,7 @@ export default () => {
     }, []);
 
     const fetchMoreData = async () => {
-        const jokes = await getRondomJokes();
+        const jokes = await getRandomJokes();
         setItems(items.concat(jokes));
     };
 

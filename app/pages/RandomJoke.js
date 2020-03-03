@@ -16,7 +16,9 @@ export default () => {
             <h1>Random Joke</h1>
             <div className="text-center">
                 <button className="btn btn-success"
-                        onClick={fetchRandomJoke}>
+                        onClick={fetchRandomJoke}
+                        data-testid="fetchRandomJokeBtn"
+                >
                     Fetch A Random Joke
                 </button>
                 <DisplayJoke joke={randomJoke}/>

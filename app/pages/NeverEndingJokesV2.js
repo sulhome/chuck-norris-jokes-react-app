@@ -15,7 +15,6 @@ export default () => {
     };
 
     useEffect(() => {
-
         window.addEventListener('scroll', windowScrollEventHandler);
         return () => window.removeEventListener('scroll', windowScrollEventHandler);
     }, []);

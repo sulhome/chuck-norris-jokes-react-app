@@ -6,7 +6,7 @@ export default ({joke}) => {
     }
     return (
         <div className="mt-5 alert alert-success">
-            <p className="text-dark font-weight-bold">{joke}</p>
+            <p data-testid="jokeText" className="text-dark font-weight-bold">{joke}</p>
         </div>
     );
 };
