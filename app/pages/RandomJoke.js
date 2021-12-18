@@ -1,14 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {getRandomJoke} from '../data/jokes-repository';
 import DisplayJoke from '../components/DisplayJoke';
 
 export default () => {
 
-    const [randomJoke, setRandomJoke] = React.useState(null);
+    const [randomJoke, setRandomJoke] = useState(null);
 
     const fetchRandomJoke = async () => {
+
         let joke = await getRandomJoke();
         setRandomJoke(joke);
+
     };
 
     return (
@@ -17,8 +19,7 @@ export default () => {
             <div className="text-center">
                 <button className="btn btn-success"
                         onClick={fetchRandomJoke}
-                        data-testid="fetchRandomJokeBtn"
-                >
+                        data-testid="fetchRandomJokeBtn">
                     Fetch A Random Joke
                 </button>
                 <DisplayJoke joke={randomJoke}/>

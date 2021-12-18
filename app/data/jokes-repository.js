@@ -8,6 +8,9 @@ export function getRandomJoke() {
         .then((res) => res.data)
         .then((data) => {
             return decode(data.value.joke);
+        })
+        .catch(e => {
+            console.error(e);
         });
 }
 
@@ -16,6 +19,9 @@ export function getCustomJoke(firstName, lastName) {
         .then((res) => res.data)
         .then((data) => {
             return decode(data.value.joke);
+        })
+        .catch(e => {
+            console.error(e);
         });
 }
 
@@ -25,6 +31,9 @@ export function getRandomJokes(numberOfJokes = 15) {
         .then((data) => {
             return data.value
                 .map(item => decode(item.joke));
+        })
+        .catch(e => {
+            console.error(e);
         });
 }
 

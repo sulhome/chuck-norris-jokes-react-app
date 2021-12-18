@@ -1,47 +1,44 @@
 import React, {useEffect} from 'react';
-import InfiniteScroll from 'react-infinite-scroll-component';
 import {getRandomJokes} from '../data/jokes-repository';
 import DisplayJoke from '../components/DisplayJoke';
-
-const style = {
-    height: 30,
-    border: '1px solid green',
-    margin: 6,
-    padding: 8
-};
 
 export default () => {
 
     const [items, setItems] = React.useState([]);
+    const [loadMore, setLoadMore] = React.useState(true);
 
-    useEffect(() => {
-
-        async function loadJokes() {
-            const jokes = await getRondomJokes();
-            setItems(jokes);
+    const windowScrollEventHandler = () => {
+        const listElement = document.getElementById('list');
+        if (window.scrollY + window.innerHeight >= listElement.clientHeight + listElement.offsetTop) {
+            setLoadMore(true);
         }
-
-        loadJokes();
-    }, []);
-
-    const fetchMoreData = async () => {
-        const jokes = await getRandomJokes();
-        setItems(items.concat(jokes));
     };
 
+    useEffect(() => {
+        window.addEventListener('scroll', windowScrollEventHandler);
+        return () => window.removeEventListener('scroll', windowScrollEventHandler);
+    }, []);
+
+    useEffect(() => {
+        if (loadMore) {
+            getRandomJokes()
+                .then(jokes => {
+                    setItems(items.concat(jokes));
+                    setLoadMore(false);
+                });
+        }
+    }, [loadMore]);
+
+
     return (
-        <div className="mb-5">
+        <div id="list">
             <h1>Infinite Jokes</h1>
 
-            <InfiniteScroll
-                dataLength={items.length}
-                next={fetchMoreData}
-                hasMore={true}
-                loader={<h4>Loading...</h4>}>
-                {items.map((joke, index) => (
-                    <DisplayJoke joke={joke} key={index}/>
-                ))}
-            </InfiniteScroll>
+
+            {items.map((joke, index) => (
+                <DisplayJoke joke={joke} key={index}/>
+            ))}
+
         </div>
     );
 }

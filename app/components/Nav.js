@@ -2,20 +2,20 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 
 const activeStyle = {
-    color: 'rgb(187, 46, 31)'
+    textDecoration: 'underline'
 };
 
 export default function Nav() {
     return (
 
-        <nav className='row'>
+        <nav className='row mt-2'>
             <ul className='row nav'>
                 <li>
                     <NavLink
                         to='/'
                         exact
                         activeStyle={activeStyle}
-                        className='nav-link'>
+                        className='nav-link font-weight-bolder text-warning'>
                         Random Joke
                     </NavLink>
                 </li>
@@ -23,7 +23,7 @@ export default function Nav() {
                     <NavLink
                         to='/search-joke'
                         activeStyle={activeStyle}
-                        className='nav-link'>
+                        className='nav-link font-weight-bolder text-warning'>
                         Search Joke
                     </NavLink>
                 </li>
@@ -31,12 +31,11 @@ export default function Nav() {
                     <NavLink
                         to='/never-ending-jokes'
                         activeStyle={activeStyle}
-                        className='nav-link'>
+                        className='nav-link font-weight-bolder text-warning'>
                         Never-ending Jokes
                     </NavLink>
                 </li>
             </ul>
         </nav>
-
     );
 }

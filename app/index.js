@@ -2,11 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './style/main.scss';
 import Nav from './components/Nav';
-import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import RandomJoke from './pages/RandomJoke';
 import SearchJoke from './pages/SearchJoke';
-import NeverEndingJokes from './pages/NeverEndingJokes';
-import NeverEndingJokesV2 from './pages/NeverEndingJokesV2';
+import NeverEndingJokesV2 from './pages/NeverEndingJokes';
 
 class App extends React.Component {
 
@@ -30,6 +29,7 @@ class App extends React.Component {
 }
 
 ReactDOM.render(
-    <App/>,
+    <App/>
+    ,
     document.getElementById('app')
 );
