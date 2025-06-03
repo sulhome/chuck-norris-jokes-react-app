@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/chuck-norris-jokes-react-app/static/css/main.0037386e.css",
+    "main.js": "/chuck-norris-jokes-react-app/static/js/main.957464f3.js",
+    "static/js/453.f15e434f.chunk.js": "/chuck-norris-jokes-react-app/static/js/453.f15e434f.chunk.js",
+    "index.html": "/chuck-norris-jokes-react-app/index.html",
+    "main.0037386e.css.map": "/chuck-norris-jokes-react-app/static/css/main.0037386e.css.map",
+    "main.957464f3.js.map": "/chuck-norris-jokes-react-app/static/js/main.957464f3.js.map",
+    "453.f15e434f.chunk.js.map": "/chuck-norris-jokes-react-app/static/js/453.f15e434f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0037386e.css",
+    "static/js/main.957464f3.js"
+  ]
+}
