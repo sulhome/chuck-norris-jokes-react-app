@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
+import {HashRouter as Router} from 'react-router-dom';
 
 const queryClient = new QueryClient();
 const root = ReactDOM.createRoot(
@@ -10,9 +11,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
     <React.StrictMode>
-        <QueryClientProvider client={queryClient}>
-            <App/>
-        </QueryClientProvider>
+        <Router>
+            <QueryClientProvider client={queryClient}>
+                <App/>
+            </QueryClientProvider>
+        </Router>
     </React.StrictMode>
 );
 

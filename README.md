@@ -1,46 +1,81 @@
-# Getting Started with Create React App
+# Chuck Norris Jokes React App 🥋😂
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fun and interactive single-page React application that fetches and displays Chuck Norris jokes using the [Chuck Norris API](https://api.chucknorris.io/). Built with modern tools like TypeScript, React Query, and React Router, and deployed on GitHub Pages.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🔍 Features
 
-### `npm start`
+- ✅ Fetch a random Chuck Norris joke
+- ✅ Infinite jokes with scroll
+- ✅ Clean and responsive UI using Bootstrap 5
+- ✅ Built with `@tanstack/react-query` for powerful data fetching & caching
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🚀 Live Demo
 
-### `npm test`
+🌐 Hosted on GitHub Pages:  
+**[https://sulhome.github.io/chuck-norris-jokes-react-app/](https://sulhome.github.io/chuck-norris-jokes-react-app/)**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📦 Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1. Clone the repo
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/sulhome/chuck-norris-jokes-react-app.git
+cd chuck-norris-jokes-react-app
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2. Install dependencies
 
-### `npm run eject`
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 3. Run the app locally
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+App will be available at `http://localhost:3000`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+## 🛠 Tech Stack
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- React + TypeScript
+- React Router (HashRouter)
+- @tanstack/react-query
+- Bootstrap 5
+- GitHub Pages
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+
+## 📂 Project Structure
+
+```bash
+src/
+├── components/        # Reusable components like DisplayJoke
+├── data/              # API repository logic
+├── hooks/             # Custom hooks like useScrollToBottom
+├── pages/             # Route-based components
+├── style/             # CSS files
+├── App.tsx            # Main app component
+└── index.tsx          # Entry point
+```
+
+---
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+### 💬 Got feedback or ideas?
+
+Feel free to open an issue or submit a pull request. Contributions welcome!

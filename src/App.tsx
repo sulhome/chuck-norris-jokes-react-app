@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import Nav from './components/Nav';
 import RandomJoke from './pages/RandomJoke';
 import NeverEndingJokes from './pages/NeverEndingJokes';
@@ -9,7 +9,6 @@ import './style/main.css';
 
 const App = () => {
     return (
-        <Router>
             <div className="container">
                 <Nav/>
                 <div className="mt-5">
@@ -20,7 +19,6 @@ const App = () => {
                     </Routes>
                 </div>
             </div>
-        </Router>
     );
 };
 
